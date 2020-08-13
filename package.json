@@ -1,0 +1,24 @@
+{
+  "name": "parcel-starter",
+  "version": "1.0.0",
+  "description": "A simple parcel starter template",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "parcel serve ./public/index.html",
+    "build": "parcel build ./public/index.html --public-url ./"
+  },
+  "keywords": [
+    "js",
+    "starter"
+  ],
+  "author": "Tobi Balogun",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "gsap": "^3.4.2"
+  }
+}

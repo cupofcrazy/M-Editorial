@@ -1,0 +1,171 @@
+@import './reset';
+@import './fonts';
+@import './variables';
+@import './mixins';
+
+
+:root {
+    --main-color: #ff7300;
+    --accent-color: #111;
+    --font-sm: .75rem;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    padding: .5em .75em;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    opacity: 0;
+
+    &.loaded {
+        opacity: 1;
+    }
+}
+
+.h__line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin: .5em 0;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        font-family: $font-serif;
+        font-weight: 700;
+    }
+    &__title {
+        font-family: $font-sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: var(--font-sm);
+    }
+    &__menu__icon {
+        cursor: pointer;
+        font-family: $font-sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: var(--font-sm);
+
+        .bar {
+            width: 20px;
+            height: 1px;
+            background-color: var(--accent-color);
+            margin-bottom: 3px;
+        }
+    }
+}
+
+.main__logo {
+    font-family: $font-sans-serif;
+    text-align: center;
+    font-size: 6.5rem;
+
+}
+
+.category {
+    display: flex;
+    justify-content: center;
+    font-family: $font-sans-serif;
+    margin-top: -.5em;
+
+    &__inner {
+        text-align: center;
+        font-size: var(--font-sm);
+        text-transform: uppercase;
+
+        p {
+
+        }
+    }
+}
+
+.main__heading {
+    font-family: $font-sans-serif;
+    
+    h1 {
+        line-height: 0.8;
+        font-size: 10vw;
+        font-weight: 100;
+        text-align: center;
+    }
+}
+
+.main__image {
+    width: 300px;
+    height: 350px;
+    background-color: var(--main-color);
+    margin: .15em auto;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: none;
+        object-fit: cover;
+        object-position: center;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.main__info {
+    font-family: $font-sans-serif;
+    text-align: center;
+    h2 {
+        font-size: 3rem;
+        font-weight: 100;
+    }
+}
+
+.footer {
+    &__inner {
+        font-family: $font-sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        
+        text-transform: uppercase;
+
+        h3 {
+            padding: .1em 0;
+            font-size: var(--font-sm);
+            font-weight: 500;
+        }
+    }
+}
+
+.credits {
+    font-family: $font-sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: .85rem;
+    position: fixed;
+    top: 50%;
+    right: -9.5em;
+    transform: translateY(-50%) rotate(90deg);
+
+    &__detail > a {
+        color: var(--accent-color);
+    }
+}
